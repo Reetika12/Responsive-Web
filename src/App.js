@@ -23,10 +23,25 @@ function App() {
       </nav>
       <section className="background firstsection">
         <div className="box-main">
-            <div className="firsthalf">
-                
+            <div className="firstHalf">
+              <p className="text-big">The Future of Education is here</p>
+              <p className="text-small">the vaery important thing in todays life is to focus on your main stream just don't divert with secondary stream </p>
+              <div className="buttons">
+                <button className="btn">Subscribe</button>
+                <button className="btn">Watch Video</button>
+              </div>
+            </div>
+            <div className="secondHalf">
+                <img   
+                  src={require("./Image/laptop.jpeg").default}
+                  alt="logo1"
+                />
             </div>
         </div>
+      </section>
+      <section className="secRight">
+        <p className="sectionTag"></p>
+        <p className="sectionSubTag"></p>
       </section>
     </div>
   );
