@@ -1,11 +1,20 @@
 import './App.css';
+import './CSS/Responsive.css'
 
 function App() {
+
+ const OpenToggleEvent = () =>{
+    let navList=document.querySelector('.nav-list')
+    let rightNav=document.querySelector('.rightNav')
+    let navBar=document.querySelector('.navbar')
+    navList.classList.toggle('v-class-resp');
+    rightNav.classList.toggle('v-class-resp');
+    navBar.classList.toggle('h-nav-resp')
+  }
   return (
     <div >
-      <nav className="navbar background">
-          <ul className="nav-list">
-             <div className="logo">
+      <nav className="navbar background h-nav-resp">
+          <ul className="nav-list logo v-class-resp">
                <img
                  src={require("./Image/logo.svg").default}
                  alt="logo"
@@ -14,11 +23,15 @@ function App() {
                <li><a href="#about">About</a></li>
                <li><a href="#services">Services</a></li>
                <li><a href="#contact">Contact Us</a></li>
-             </div>
           </ul>
-          <div className="rightNav">
+          <div className="rightNav v-class-resp">
             <input type="text" name="search" id="search"/>
             <button className="btn btn-sm">Search</button>
+          </div>
+          <div onClick={OpenToggleEvent} className="burger">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
           </div>
       </nav>
       <section className="background firstsection">
@@ -39,7 +52,7 @@ function App() {
             </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" id="services">
         <div className="paras">
           <p className="sectionTag text-big">The end of search is here.</p>
           <p className="sectionSubTag text-small">Lorem password Lorem password Lorem password Lorem password Lorem password Lorem password Lorem password Lorem password lorem password Lorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem passwordLorem
@@ -49,7 +62,7 @@ function App() {
          <div className="thumbnail">
             <img
                 src={require("./Image/sideImage.jpeg").default}
-                alt="laptop image"
+                alt="laptopImage"
                 />
         </div>
       </section>
@@ -63,7 +76,7 @@ function App() {
          <div className="thumbnail">
             <img
                 src={require("./Image/book1.jpeg").default}
-                alt="laptop image"
+                alt="book1"
                 />
         </div>
       </section>
@@ -81,8 +94,7 @@ function App() {
                 />
         </div>
       </section>
-      <hr />
-      <section className="contact">
+      <section className="contact" id="contact">
           <h2 className="text-align">Contact Us</h2>
           <div className="form">
               <input className="form-input" type="text" name="name" id="name" placeholder="Enter Your name"></input>
@@ -92,6 +104,9 @@ function App() {
               <button className="btn btn-dark">Submit</button>
           </div>
       </section>
+      <footer className="text-footer">
+          <p>Copyright @2027 all rights reserved</p>
+      </footer>
     </div>
   );
 }
