@@ -107,6 +107,7 @@ function App() {
       <footer className="text-footer">
           <p>Copyright @2027 all rights reserved</p>
       </footer>
+      fvfbghn
     </div>
   );
 }
